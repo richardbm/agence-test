@@ -10,14 +10,16 @@ class Migration(migrations.Migration):
     dependencies = [
         ('desempenho', '0002_auto_20171108_1937'),
     ]
-
     operations = [
         migrations.CreateModel(
             name='PermissaoSistema',
             fields=[
-                ('co_usuario', models.CharField(max_length=20, primary_key=True, serialize=False)),
+                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('co_usuario', models.CharField(max_length=20, serialize=False)),
                 ('co_tipo_usuario', models.BigIntegerField(default=0)),
                 ('co_sistema', models.BigIntegerField(default=0)),
+                ('in_ativo', models.CharField(max_length=1, default="S")),
+                ('co_usuario_atualizacao', models.CharField(max_length=20, blank=True, null=True)),
                 ('dt_atualizacao', models.DateTimeField(blank=True, null=True)),
             ],
         ),
@@ -31,3 +33,4 @@ class Migration(migrations.Migration):
             unique_together=set([('co_usuario', 'co_tipo_usuario', 'co_sistema', 'dt_atualizacao')]),
         ),
     ]
+

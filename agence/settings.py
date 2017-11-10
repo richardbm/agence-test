@@ -123,3 +123,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+import sys
+
+TEST = False
+if len(sys.argv) > 1 and sys.argv[1] == 'test':
+    TEST = True

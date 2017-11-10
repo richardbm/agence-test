@@ -42,13 +42,13 @@ PERM_CHOICE = (
 
 
 class PermissaoSistema(models.Model):
-    co_usuario = models.CharField(max_length=20, primary_key=True)
+    co_usuario = models.ForeignKey(CaoUsuario)
     co_tipo_usuario = models.BigIntegerField(default=0)
     co_sistema = models.BigIntegerField(default=0)
-    in_ativo = models.CharField(max_length=1, default="S", choices=PERM_CHOICE),
-    co_usuario_atualizacao = models.CharField(max_length=20, blank=True, null=True),
+    in_ativo = models.CharField(max_length=1, default="S", choices=PERM_CHOICE)
+    co_usuario_atualizacao = models.CharField(max_length=20, blank=True, null=True)
     dt_atualizacao = models.DateTimeField(blank=True, null=True)
-  
+
     class Meta:
         unique_together = ("co_usuario", "co_tipo_usuario",
                            "co_sistema", "dt_atualizacao")
@@ -85,3 +85,20 @@ class CaoSalario(models.Model):
     dt_alteracao = models.DateField(blank=True, null=True)
     brut_salario = models.FloatField(default=0)
     liq_salario = models.FloatField(default=0)
+
+
+class CaoFatura(models.Model):
+    co_fatura = models.IntegerField(primary_key=True)
+    co_cliente = models.IntegerField(default=0)
+    co_sistema = models.IntegerField(default=0)
+    co_os = models.IntegerField(default=0)
+    num_nf = models.IntegerField(default=0)
+    total = models.FloatField(default=0)
+    valor = models.FloatField(default=0)
+    data_emissao = models.DateField(blank=True, null=True)
+    corpo_nf = models.TextField()
+    comissao_cn = models.FloatField(default=0)
+    total_imp_inc = models.FloatField(default=0)
+
+
+
