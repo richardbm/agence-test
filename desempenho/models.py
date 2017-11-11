@@ -42,7 +42,7 @@ PERM_CHOICE = (
 
 
 class PermissaoSistema(models.Model):
-    co_usuario = models.ForeignKey(CaoUsuario)
+    co_usuario = models.ForeignKey(CaoUsuario, related_name="permissions")
     co_tipo_usuario = models.BigIntegerField(default=0)
     co_sistema = models.BigIntegerField(default=0)
     in_ativo = models.CharField(max_length=1, default="S", choices=PERM_CHOICE)
@@ -58,7 +58,7 @@ class CaoOs(models.Model):
     co_os = models.IntegerField(primary_key=True)
     nu_os = models.IntegerField(null=True)
     co_sistema = models.IntegerField(default=0)
-    co_usuario = models.CharField(default='0', max_length=50)
+    co_usuario = models.ForeignKey(CaoUsuario, related_name="os")
     co_arquitetura = models.IntegerField(default=0)
     ds_os = models.CharField(max_length=200, default='0')
     ds_caracteristica = models.CharField(max_length=200, default='0')
@@ -80,8 +80,7 @@ class CaoOs(models.Model):
 
 
 class CaoSalario(models.Model):
-    co_usuario = models.CharField(primary_key=True, max_length=20,
-                                  blank=True, default='')
+    co_usuario = models.OneToOneField(CaoUsuario, primary_key=True, related_name="salario")
     dt_alteracao = models.DateField(blank=True, null=True)
     brut_salario = models.FloatField(default=0)
     liq_salario = models.FloatField(default=0)
@@ -91,7 +90,7 @@ class CaoFatura(models.Model):
     co_fatura = models.IntegerField(primary_key=True)
     co_cliente = models.IntegerField(default=0)
     co_sistema = models.IntegerField(default=0)
-    co_os = models.IntegerField(default=0)
+    co_os = models.ForeignKey(CaoOs, related_name="faturas")
     num_nf = models.IntegerField(default=0)
     total = models.FloatField(default=0)
     valor = models.FloatField(default=0)
