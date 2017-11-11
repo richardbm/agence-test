@@ -33,6 +33,10 @@ class CaoUsuario(models.Model):
     uf_cidade = models.CharField(max_length=2, blank=True, null=True)
     dt_expedicao = models.DateField(blank=True, null=True)
 
+    @property
+    def get_salario(self):
+        return self.salario.brut_salario
+
     class Meta:
         unique_together = ("co_usuario", "no_usuario", "dt_alteracao",)
 
@@ -98,6 +102,5 @@ class CaoFatura(models.Model):
     corpo_nf = models.TextField()
     comissao_cn = models.FloatField(default=0)
     total_imp_inc = models.FloatField(default=0)
-
 
 

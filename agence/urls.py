@@ -21,10 +21,10 @@ from desempenho import views
 router = routers.DefaultRouter()
 
 router.register('consultor', views.ConsultorViewSet)
-router.register('relatorio', views.RelatorioViewSet)
 
 
 urlpatterns = [
     url(r'^', include(router.urls)),
+    url(r'relatorio/', views.RelatorioView.as_view()),
     url(r'^admin/', admin.site.urls),
 ]
