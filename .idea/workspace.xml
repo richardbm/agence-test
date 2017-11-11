@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9069c2c1-15e0-417a-89d2-6a645291ad64" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/desempenho/serializers.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/agence/settings.py" afterPath="$PROJECT_DIR$/agence/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/agence/urls.py" afterPath="$PROJECT_DIR$/agence/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/desempenho/models.py" afterPath="$PROJECT_DIR$/desempenho/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/desempenho/serializers.py" afterPath="$PROJECT_DIR$/desempenho/serializers.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/desempenho/views.py" afterPath="$PROJECT_DIR$/desempenho/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,8 +31,8 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/desempenho/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="82" column="48" lean-forward="false" selection-start-line="82" selection-start-column="38" selection-end-line="82" selection-end-column="48" />
+            <state relative-caret-position="54">
+              <caret line="3" column="6" lean-forward="false" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -101,8 +98,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/desempenho/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="41" column="72" lean-forward="true" selection-start-line="41" selection-start-column="72" selection-end-line="41" selection-end-column="72" />
+            <state relative-caret-position="72">
+              <caret line="22" column="64" lean-forward="false" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="64" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -123,8 +120,8 @@
       <file leaf-file-name="serializers.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/desempenho/serializers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="25" lean-forward="false" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+            <state relative-caret-position="72">
+              <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -170,8 +167,8 @@
       <find>\.</find>
       <find>\w+\.\w+</find>
       <find>salario</find>
-      <find>CaoUsuario</find>
       <find>chiodaro</find>
+      <find>CaoUsuario</find>
       <find>carvalho</find>
     </findStrings>
   </component>
@@ -196,12 +193,12 @@
         <option value="$PROJECT_DIR$/desempenho/migrations/0010_auto_20171110_2050.py" />
         <option value="$PROJECT_DIR$/desempenho/migrations/0009_auto_20171110_2048.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/desempenho/serializers.py" />
         <option value="$PROJECT_DIR$/agence/settings.py" />
         <option value="$PROJECT_DIR$/agence/urls.py" />
         <option value="$PROJECT_DIR$/desempenho/migrations/0016_auto_20171110_2254.py" />
         <option value="$PROJECT_DIR$/desempenho/migrations/0015_auto_20171110_2145.py" />
         <option value="$PROJECT_DIR$/desempenho/models.py" />
+        <option value="$PROJECT_DIR$/desempenho/serializers.py" />
         <option value="$PROJECT_DIR$/desempenho/views.py" />
       </list>
     </option>
@@ -773,16 +770,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/desempenho/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="25" lean-forward="false" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/desempenho/migrations/0010_auto_20171110_2050.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -796,16 +783,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/desempenho/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="82" column="48" lean-forward="false" selection-start-line="82" selection-start-column="38" selection-end-line="82" selection-end-column="48" />
+        <state relative-caret-position="54">
+          <caret line="3" column="6" lean-forward="false" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/desempenho/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/desempenho/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="41" column="72" lean-forward="true" selection-start-line="41" selection-start-column="72" selection-end-line="41" selection-end-column="72" />
+        <state relative-caret-position="72">
+          <caret line="22" column="64" lean-forward="false" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="64" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>

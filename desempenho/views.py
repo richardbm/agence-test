@@ -20,7 +20,7 @@ class ConsultorViewSet(viewsets.ModelViewSet):
 
 class RelatorioViewSet(viewsets.ModelViewSet):
     queryset = desempehno_models.CaoFatura.objects.all()
-    serializer_class = desempehno_serializer.ConsultorSerializer
+    serializer_class = desempehno_serializer.RelatorioSerializer
 
     def get_queryset(self):
         queryset = super().get_queryset()
@@ -39,7 +39,7 @@ class RelatorioViewSet(viewsets.ModelViewSet):
         queryset = queryset.annotate(dates=TruncMonth('data_emissao'),
                                      val=F('valor') - (F('valor') * F('total_imp_inc') / 100)) \
                             .annotate(receita=Sum('val'))\
-                            .values("co_os__co_usuario", "dates", "sum")
+                            .values("co_os__co_usuario", "dates", "receita")
         return queryset
 
 
