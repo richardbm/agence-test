@@ -1,0 +1,13 @@
+[[source]]
+url = "https://agence-test-back.herokuapp.com"
+verify_ssl = false
+
+[packages]
+dj-database-url = "*"
+django = "*"
+gunicorn = "*"
+psycopg2 = "*"
+whitenoise = "*"
+
+[requires]
+python_version = "3.6"⏎
