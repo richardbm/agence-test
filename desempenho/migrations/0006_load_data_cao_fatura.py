@@ -10,7 +10,7 @@ from django.conf import settings
 
 
 def load_data(apps, schema_editor):
-    if settings.TEST is True:
+    if settings.TEST or settings.HEROKU is True:
         return
 
     with connection.cursor() as cursor:

@@ -141,3 +141,5 @@ import sys
 TEST = False
 if len(sys.argv) > 1 and sys.argv[1] == 'test':
     TEST = True
+
+HEROKU = True
